@@ -61,7 +61,7 @@
      color: var(--vivo-cyan);
      text-shadow: var(--neon-glow);
  }
-
+  
  .navbar-brand,
  .navbar-brand:hover {
      font-weight: 700;
