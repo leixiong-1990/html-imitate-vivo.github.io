@@ -1,0 +1,341 @@
+ /* 定义全局变量 */
+ :root {
+     --vivo-blue: #1976d2;
+     --vivo-cyan: #00e5ff;
+     --vivo-purple: #7b1fa2;
+     --vivo-dark: #121212;
+     --vivo-card-bg: #1e1e1e;
+     --neon-glow: 0 0 10px rgba(0, 229, 255, 0.7),
+         0 0 20px rgba(0, 229, 255, 0.5),
+         0 0 30px rgba(0, 229, 255, 0.3);
+ }
+
+ body {
+     font-family: 'Montserrat', sans-serif;
+     background-color: var(--vivo-dark);
+     color: #fff;
+     overflow-x: hidden;
+ }
+
+ /* 导航栏部分 */
+ .navbar {
+     background-color: rgba(18, 18, 18, 0.6) !important;
+     backdrop-filter: blur(5px);
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+     padding: 15px 0;
+ }
+
+
+ .nav-link {
+     position: relative;
+     color: rgba(255, 255, 255, 0.9);
+     margin: 0 12px;
+ }
+
+ .nav-link:hover {
+     text-shadow: var(--neon-glow);
+ }
+
+ .nav-link::after {
+     content: '';
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 0%;
+     height: 2px;
+     background: linear-gradient(45deg, var(--vivo-cyan), var(--vivo-blue));
+     transition: all 0.3s;
+ }
+
+ .nav-link:hover::after {
+     width: 100%;
+ }
+
+ .icons a {
+     font-size: 1.4rem;
+     color: rgba(255, 255, 255, 0.9);
+     padding: 0 10px;
+ }
+
+ .icons a:hover {
+     color: var(--vivo-cyan);
+     text-shadow: var(--neon-glow);
+ }
+
+ .navbar-brand,
+ .navbar-brand:hover {
+     font-weight: 700;
+     font-size: 28px;
+     background: linear-gradient(45deg, var(--vivo-cyan), var(--vivo-blue));
+     -webkit-background-clip: text;
+     background-clip: text;
+     color: transparent;
+     text-shadow: var(--neon-glow);
+ }
+
+ .navbar-toggler-icon {
+    color: rgba(248, 249, 250, 0.65);
+ }
+
+
+
+ /* 轮播图 */
+ .banner {
+     width: 100%;
+     height: 50vw;
+     /* 背景遮罩 */
+     mask-image: linear-gradient(rgba(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
+     -webkit-mask-image: linear-gradient(rgba(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
+ }
+
+ .banner .carousel-item img {
+     width: 100%;
+     height: 50vw;
+ }
+
+ .carousel-caption {
+     bottom: 8.25rem;
+ }
+
+ .carousel-indicators {
+     bottom: 7rem;
+ }
+
+
+ .hot-product .info {
+     color: rgba(255, 255, 255, 0.7);
+ }
+
+ /* 卡片制作 */
+ .card {
+     overflow: hidden;
+     background-color: var(--vivo-card-bg);
+     border-radius: 15px;
+     border: 1px solid rgba(255, 255, 255, 0.1);
+     transition: all 0.3s;
+ }
+
+ .card:hover {
+     transform: translateY(-10px);
+     border-color: rgba(0, 229, 255, 0.3);
+ }
+
+ .card .card-img {
+     padding: 30px;
+     background-color: #292929;
+
+ }
+
+ .card .card-img img {
+     animation: move 5s ease-in-out infinite alternate;
+ }
+
+ @keyframes move {
+     0% {
+         transform: translateY(0);
+     }
+
+     100% {
+         transform: translateY(-15px);
+     }
+ }
+
+ .card-title {
+     font-size: 1.4rem;
+     color: #fff;
+ }
+
+ .card-text {
+     font-size: 0.9rem;
+     color: rgba(0, 229, 255, 0.7);
+ }
+
+ .card-price {
+     font-size: 1.5rem;
+     color: var(--vivo-cyan);
+     font-weight: 600;
+ }
+
+ .card-body .btn {
+     font-size: 0.9rem;
+     color: var(--vivo-cyan);
+     border: 1px solid var(--vivo-cyan);
+     border-radius: 30px;
+     padding: 10px 0;
+     width: 100%;
+     background-color: var(--vivo-card-bg);
+     font-weight: 600;
+ }
+
+ .card-body .btn:hover {
+     box-shadow: var(--neon-glow);
+ }
+
+ /* 未来科技 */
+ .future-tech {
+     background: url(../img/bg1.avif) no-repeat center/cover;
+     /* 背景图片固定定位 */
+     background-attachment: fixed;
+ }
+
+ .future-tech::before {
+     position: absolute;
+     left: 0;
+     top: 0;
+     content: '';
+     background: rgba(18, 18, 18, 0.9);
+     width: 100%;
+     height: 100%;
+ }
+
+
+ .row .col-md-4 .future-icon {
+     font-size: 3rem;
+     /* background: var(--neon-glow); */
+     text-shadow: var(--neon-glow);
+     color: var(--vivo-cyan);
+ }
+
+ .row .col-md-4 .title {}
+
+ .row .col-md-4 .desc {
+     color: rgba(255, 255, 255, 0.7);
+ }
+
+
+ /* 底部导航 */
+
+ .footer {
+     /* margin-top: 60px; */
+     background-color: rgb(10, 10, 10);
+     padding-top: 60px;
+ }
+
+ .footer dt {
+     font-size: 1.2rem;
+     font-weight: 600;
+     padding-bottom: 10px;
+     margin-bottom: 15px;
+
+ }
+
+ .footer dt::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 40px;
+     height: 2px;
+     background: linear-gradient(90deg, var(--vivo-cyan), var(--vivo-blue));
+ }
+
+ .footer dd>a {
+     display: block;
+     color: rgba(255, 255, 255, 0.7);
+     text-decoration: none;
+     font-size: 1rem;
+     transition: all 0.3s;
+     margin-bottom: 15px;
+ }
+
+
+ .footer dd>a:hover {
+     color: var(--vivo-cyan);
+     transform: translateX(5px);
+ }
+
+
+ .footer .icons {
+     display: flex;
+     gap: 10px;
+ }
+
+ .footer .icons a {
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background: rgba(255, 255, 255, 0.1);
+     text-align: center;
+     line-height: 40px;
+     text-decoration: none;
+     transition: all 0.3s;
+ }
+
+ .footer .icons a:hover {
+     box-shadow: var(--neon-glow);
+     background: linear-gradient(90deg, var(--vivo-cyan), var(--vivo-blue));
+     color: #fff;
+     transform: translateY(-3px);
+ }
+
+ .footer .news {
+     color: rgba(255, 255, 255, 0.7);
+ }
+
+ .footer .form-control {
+     border: 0;
+ }
+
+ .footer .form-control::placeholder {
+     color: rgba(255, 255, 255, 0.7);
+ }
+
+ .footer .input-group .btn {
+     background: linear-gradient(90deg, var(--vivo-cyan), var(--vivo-blue));
+     color: #fff;
+     border-radius: 30px;
+     transition: all 0.3s;
+     border: 0;
+ }
+
+ .footer .input-group .btn:hover {
+     transform: translateY(-3px);
+     box-shadow: var(--neon-glow);
+ }
+
+ .copyright {
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+     color: rgba(255, 255, 255, 0.6);
+ }
+
+ @media (max-width:768px) {
+     .navbar {
+         padding: 0;
+     }
+
+     .carousel-indicators {
+        display: none;
+     }
+
+ }
+
+ @media (max-width:992px) {
+     .banner {
+        margin-top: 80px;
+     }
+
+ }
+
+
+ /* 自定义滚动条样式 */
+ /* 滚动条设置宽度和高度 */
+ /* 滚动条设置宽度和高度 */
+ ::-webkit-scrollbar {
+   width: 10px;
+ }
+
+ /* 设置轨道背景色, 圆角等 */
+ ::-webkit-scrollbar-track {
+   background: var(--vivo-dark);
+ }
+
+ /* 设置滑块样式 */
+ ::-webkit-scrollbar-thumb {
+   background: linear-gradient(var(--vivo-blue), var(--vivo-cyan));
+   border-radius: 10px;
+ }
+
+ /* 鼠标经过滑块 */
+ ::-webkit-scrollbar-thumb:hover {
+   background: linear-gradient(var(--vivo-cyan), var(--vivo-blue));
+ }
